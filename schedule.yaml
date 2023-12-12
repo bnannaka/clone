@@ -1,0 +1,14 @@
+name: Scheduled Workflow
+
+# .gitlab-ci.yml
+
+stages:
+  - build
+
+scheduled-job:
+  stage: build
+  script:
+    - echo "Running scheduled job"
+  only:
+    - schedules
+
